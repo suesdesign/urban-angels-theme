@@ -12,35 +12,29 @@ body {
 
 #main-nav {
 	padding: 0;
-	background-color: $brand-primary;
-	.menu-primary-menu-container {
-	}
-	#menu-primary-menu {
-	}
+	background-color: #ffffff;
 	ul {
-		background-color: $brand-primary;
+		background-color: #ffffff;
 		list-style-type: none;
 		padding: 0;
-		.current-page-item {
-				background-color: darken($brand-primary, 20%);
+		.current_page_item a {
+			border-bottom: 1px solid #000000;
+			color: darken($brand-primary, 10%)
 			}
 		li {
 			float: left;
+			margin: 0.5rem 1rem;
 			a {
-				padding: 0.5rem 1rem;
-				background: $brand-primary;
-				color: #fff;
+				background-color: #ffffff;
+				color: $brand-primary;
 				text-decoration: none;
-				font-weight: bold;
 				@include transition(background .4s);
 				float: left;
 				&:hover, &:focus {
-				background-color: darken($brand-primary, 20%);
 				}
 			}
 		}
 	}
-
 }
 
 /**
@@ -56,11 +50,12 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: darken($brand-primary, 20%);
+	color: $brand-primary;
 	font-family: $font-heading;
 	line-height: 1.2;
-	padding-bottom: 15px;
+	padding-bottom: 0.2rem;
 	margin-bottom: 0;
+	font-weight: normal;
 	a {
 		text-decoration: none;
 		&:hover, &:focus {
@@ -69,8 +64,13 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+h1 {
+	padding-bottom: 1rem;
+}
+
 a {
 	color: $brand-primary;
+	font-weight: normal;
 	&:hover, &:focus {
 		color: darken($brand-primary, 20%);
 	}
@@ -147,7 +147,7 @@ figure {
 .postmetadata { 
 	a {	
 		text-decoration: none;
-		font-weight: bold;
+		font-weight: normal;
 	}
 
 }
@@ -163,6 +163,7 @@ figure {
 #main_sidebar {
 	.widget-title {
 		padding: 0.5rem 0 0.5rem 0;
+		color: #000;
 	}
 	ul {
 		padding-left: 0;
@@ -172,10 +173,10 @@ figure {
 		}
 		a { 
 			text-decoration: none;
-			font-weight: bold;
+			font-weight: normal;
 			color: $brand-primary;
 			&:hover, &:focus {
-				color:darken($brand-primary, 20%);
+				color: darken($brand-primary, 20%);
 			}
 		}
 	}
@@ -183,7 +184,7 @@ figure {
 
 .page-navigation {
 	.page-numbers {
-		font-weight: bold;
+		font-weight: normal;
 		color: $brand-primary;
 	}
 	a {
@@ -193,6 +194,7 @@ figure {
 	}
 	.current {
 		color: darken($brand-primary, 20%);
+		font-weight: bold;
 		}
 	.next, .prev {
 		text-decoration: none;
@@ -248,7 +250,7 @@ img.alignleft, img.alignright, .wp-post-image {
 	@include border-radius(6px);
 	color: #ffffff;
 	border: none;
-	font-weight: bold;
+	font-weight: normal;
 	@include transition(background .4s);
 	&:hover, &:focus {
 		background-color: darken($brand-primary, 20%);
@@ -267,15 +269,14 @@ iframe {
 **/
 
 #footer {
-	background: $brand-primary;
+	background: #ffffff;
 	margin-top: 20px;
-	padding: 20px 0;
 	p {
-		color:#fff;
+		color: #000;
 	}
 	a {
 		font-weight: normal;
-		color: lighten($brand-primary, 40%);
+		color: $brand-primary;
 		text-decoration: none;
 		&:hover, &:focus {
 			color: darken($brand-primary, 20%);
@@ -298,6 +299,14 @@ iframe {
 			font-weight: bold;
 		}
 	}
+}
+
+/**
+** other
+**/
+
+.shadow {
+	box-shadow: 0px 3px 5px #e3e5e7;
 }
 
 .screen-reader {

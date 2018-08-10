@@ -1,4 +1,4 @@
-Ï<?php
+<?php
 /*
 *** Urban Angels 1.0 ***
 *   Footer
@@ -6,6 +6,8 @@
 ?>
 
 </div><!--.container-->
+</div><!--.outer-wrapper-->
+<div class="outer-wrapper">
 <footer id="footer" role="contentinfo">
 	<div class="container">
 	<?php get_sidebar('footer'); ?>

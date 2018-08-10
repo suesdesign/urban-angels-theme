@@ -1,6 +1,6 @@
 <?php
 /*
-*** Suesdesign Starter Theme ***
+*** Urban Angels ***
 *   The sidebar containing the footer widget areas.
 */
 ?>

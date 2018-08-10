@@ -1,6 +1,6 @@
 <?php
 /*
-*** Suesdesign Starter Theme 1.0 ***
+*** Urban Angels 1.0 ***
 *   Header
 */ 
 ?>
@@ -20,12 +20,17 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<div class="outer-wrapper">
+<div class="outer-wrapper shadow">
+	<div class="container">
 <a href="#maincontent" class="tab_accessibility">Skip to main content</a>
 	<header id="banner" class="container" role="banner">
 		<a href="<?php bloginfo( 'url' ); ?>" ><img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/logo.gif" alt="logo" class="banner-logo" /></a>
-	</header>
-	<div class="container">
 		<nav  id="main-nav" role="navigation">
 			<?php wp_nav_menu( array( 'container_id' => 'main-menu','theme_location' => 'main_navigation' ) ); ?>
 		</nav>
+	</header>
+</div><!--.container-->
+	</div><!--.outer-wrapper-->
+	<div class="outer-wrapper shadow">
+		<div class="container">
+

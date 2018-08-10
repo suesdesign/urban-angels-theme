@@ -1,6 +1,6 @@
 <?php
 /*
-*** Suesdesign Starter Theme 1.0 ***
+*** Urban Angels 1.0 ***
 *   Search form
 */
 ?>
