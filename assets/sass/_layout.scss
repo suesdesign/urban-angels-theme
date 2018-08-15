@@ -115,6 +115,18 @@ footer .container {
 		}		
 	}
 
+	.three-columns {
+		padding: 0 $gutter-width;
+		/*left*/
+		&:nth-child(3n) {
+			padding: 0 0 0 $gutter-width*1.5;
+		}
+		/*right*/
+		&:nth-child(3n+1) {
+			padding: 0 $gutter-width*1.5 0 0;
+		}
+	}
+
 	.wp-post-image {
 		float: right;
 		margin: 0 0 0.6rem 0.6rem;

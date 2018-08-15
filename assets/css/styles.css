@@ -400,7 +400,8 @@ body {
         transition: background background 0.4s;
         float: left; }
         #main-nav ul li a:hover, #main-nav ul li a:focus {
-          color: #23230b; }
+          color: #23230b;
+          border-bottom: 1px solid #000000; }
 
 /**
 ** typography
@@ -569,11 +570,14 @@ img.alignleft, img.alignright, .wp-post-image {
 iframe {
   max-width: 98%; }
 
-.button a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: normal; }
+.button {
+  float: right; }
+  .button a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: normal;
+    display: block; }
 
 /**
 ** footer
@@ -746,6 +750,15 @@ footer .container {
     .two-columns:nth-child(even) {
       padding-right: 0; }
 
+  .three-columns {
+    padding: 0 1.5rem;
+    /*left*/
+    /*right*/ }
+    .three-columns:nth-child(3n) {
+      padding: 0 0 0 2.25rem; }
+    .three-columns:nth-child(3n+1) {
+      padding: 0 2.25rem 0 0; }
+
   .wp-post-image {
     float: right;
     margin: 0 0 0.6rem 0.6rem; }
@@ -826,20 +839,23 @@ footer .container {
 @media all and (max-width: 48rem) {
   .mobile-menu-button {
     position: absolute;
-    right: 2rem;
-    top: 1rem; }
+    right: 1rem;
+    top: 0.5rem; }
     .mobile-menu-button p {
       padding: 0.1rem 0 0 0;
       float: left;
-      font-size: 1.3rem; }
+      font-size: 1.2rem;
+      color: #726f22; }
+      .mobile-menu-button p:hover, .mobile-menu-button p:focus {
+        color: #23230b; }
     .mobile-menu-button div {
       float: right;
       margin-left: 0.5rem; }
       .mobile-menu-button div span {
         display: block;
-        width: 30px;
+        width: 25px;
         height: 3px;
-        margin: 7px 0;
+        margin: 6px 0;
         background: black;
         z-index: 99; }
 
@@ -886,8 +902,8 @@ footer .container {
     transition: 0.3s ease-in-out; }
 
   .mobile-menu-clicked .burger-first {
-    -webkit-transform: rotate(42deg);
-    transform: rotate(42deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
     -webkit-transform: 0.3s ease-in-out;
     transform: 0.3s ease-in-out;
     transition: 0.3s ease-in-out; }
@@ -897,8 +913,8 @@ footer .container {
     -moz-transition: opacity 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out; }
   .mobile-menu-clicked .burger-last {
-    -webkit-transform: rotate(-42deg);
-    transform: rotate(-42deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
     -webkit-transform: 0.3s ease-in-out;
     transform: 0.3s ease-in-out;
     transition: 0.3s ease-in-out; } }

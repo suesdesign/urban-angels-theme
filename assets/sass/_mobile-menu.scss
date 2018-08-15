@@ -13,21 +13,25 @@
 
 	.mobile-menu-button {
 			position: absolute;
-			right: 2rem;
-			top: 1rem;
+			right: 1rem;
+			top: 0.5rem;
 		p {
 			padding: 0.1rem 0 0 0;
 			float: left;
-			font-size: 1.3rem;
+			font-size: 1.2rem;
+			color: $brand-primary;
+			&:hover, &:focus {
+				color: darken($brand-primary, 20%);
+			}
 		}
 		div {
 			float: right;
 			margin-left: 0.5rem;
 			span {
 				display: block;
-				width: 30px;
+				width: 25px;
 				height: 3px;
-				margin: 7px 0;
+				margin: 6px 0;
 				background: rgb(0,0,0);
 				z-index: 99;
 
@@ -91,8 +95,8 @@
 
 	.mobile-menu-clicked  {
 		.burger-first {
-			-webkit-transform: rotate(42deg);
-			transform: rotate(42deg);
+			-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
 			-webkit-transform: 0.3s ease-in-out;
 			transform: 0.3s ease-in-out;
 			transition: 0.3s ease-in-out;
@@ -104,8 +108,8 @@
 		transition: opacity 0.3s ease-in-out;
 	}
 	.burger-last {
-		-webkit-transform: rotate(-42deg);
-		transform: rotate(-42deg);
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
 		-webkit-transform: 0.3s ease-in-out;
 		transform: 0.3s ease-in-out;
 		transition: 0.3s ease-in-out;
