@@ -6,7 +6,8 @@
 ?>
 
 <?php get_header(); ?>
-	<div class="column2" >
+<div class="outer-wrapper shadow">
+	<div class="container">
 		<main id="maincontent">
             
 <div class="page" id="post-<?php the_ID(); ?>">

@@ -5,7 +5,9 @@
 */
 ?>
 
-<main id="maincontent" class="column2" role="main">
+<div class="outer-wrapper shadow">
+	<div class="container">
+		<main id="maincontent" class="column2" role="main">
 <h1 class="entry-title"><?php wp_title('') ?></h1>
 
 <?php if ( have_posts () ) : ?>

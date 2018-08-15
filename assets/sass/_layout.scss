@@ -17,8 +17,10 @@
 	}
 }
 
-#main_sidebar {
-	padding: 1.5rem 0 0 $gutter-width;
+/* set padding on each side for mobile */
+
+#maincontent, #main_sidebar, #banner, #footer {
+		padding: 0 0.5rem;
 }
 
 article footer{
@@ -33,11 +35,9 @@ article footer{
 	@extend %clearfix;
 }
 
-#maincontent {
-}
-
 #footer {
 	clear: both;
+	margin-top: 1rem;
 }
 
 footer .container {
@@ -46,6 +46,19 @@ footer .container {
 
 
 @media all and (min-width: $screen-sm) {
+	
+	%clearfix-layout {
+		*zoom: 1;
+		&:before, 
+		&:after {
+			content: " ";
+			display: table;
+		}
+		&:after {
+			clear: both;
+		}
+	}
+
 	.container {
 		padding: 0;
 		margin: 0 auto;
@@ -53,7 +66,7 @@ footer .container {
 	.column1 {
 		width: 33%;
 		float: left;
-		padding: 0;
+		padding: 0 0 0 $gutter-width;
 	}
 
 	.column2 {
@@ -72,9 +85,49 @@ footer .container {
 		margin: 0 0 0.6rem 0.6rem;
 	}
 
+	img.alignleft {
+		float: left;
+		margin: 0 0.6rem 0.6rem 0;
+	}
+
+	body img.alignleft, body img.alignright {
+		max-width: 70%;
+	}
+
+	/* Row and columns from Urban Angels layout plugin */
+	.row {
+		clear: both;
+		@extend %clearfix-layout;
+	}
+
+	.two-columns {
+		@extend %clearfix-layout;
+		float: left;
+		width: 50%;
+		padding: 0 $gutter-width;
+		&:nth-child(odd) {
+			padding-left: 0;
+			@extend %clearfix-layout;
+		}
+		&:nth-child(even) {
+			padding-right: 0;
+			@extend %clearfix-layout;
+		}		
+	}
+
 	.wp-post-image {
 		float: right;
 		margin: 0 0 0.6rem 0.6rem;
+	}
+
+	/* remove padding on each side for mobile */
+
+	#maincontent, #main_sidebar, #footer {
+		padding: 0;
+	}
+
+	#footer {
+		margin-top: 2rem;
 	}
  
 	#banner {
@@ -87,6 +140,10 @@ footer .container {
 
 	#main-nav li {
 		height: 2rem;
+	}
+
+	#main_sidebar {
+		padding: 1.5rem 0 0 $gutter-width;
 	}
 
 	.footer-info, #main-nav {
@@ -120,12 +177,24 @@ footer .container {
 		flex-direction: column;
  		display: flex;
  		min-height: 100vh;
-	} 
+	}
+
+	.home #maincontent {
+		flex-direction: column;
+ 		display: flex;
+ 		min-height: 1vh;
+	}
 
 	#main-nav {
 		clear: both;
 	}
 
+}
+
+@media all and ( min-width: $screen-md ) {
+	img.alignleft, img.alignright {
+		max-width: 100%;
+	}
 }
 
 @media all and ( min-width: $screen-sm )
@@ -150,6 +219,9 @@ footer .container {
 		clear: none;
 		li {
 			padding-top: 2.5rem;
+			&:first-child {
+				padding-left: 1rem;
+			}
 		}
 	}
 }
